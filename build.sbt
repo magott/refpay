@@ -1,10 +1,12 @@
 enablePlugins(JettyPlugin)
 
-name:="dommer-fiks"
+name:="refpay"
 
 scalaVersion:="2.11.7"
 
 scalacOptions += "-target:jvm-1.8"
+
+version := "1.0"
 
 organization := "com.andersen-gott"
 
