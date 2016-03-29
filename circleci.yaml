@@ -1,0 +1,12 @@
+machine:
+  java:
+    version:
+      oraclejdk8
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - sbt package
+      - scp /home/ubuntu/refpay/target/scala-2.11/refpay_*.war dommer@dommerbetaling.no:/dommerbetaling/webapps
+      - ssh dommer@dommerbetaling.no 'mv /dommerbetaling/webapps/* /var/lib/jetty/webapps'
