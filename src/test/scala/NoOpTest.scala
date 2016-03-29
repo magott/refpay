@@ -1,12 +1,12 @@
-import org.scalatest.FlatSpec
+import org.scalatest.{FunSuite, FlatSpec}
 
 /**
   *
   */
-class NoOpTest extends FlatSpec{
+class NoOpTest extends FunSuite{
 
-  "No op test for CircleCi" should "do nothing" in {
-
+  test("Nothing to do, just trying to satisfy circleci"){
+    assert(true)
   }
 
 }
